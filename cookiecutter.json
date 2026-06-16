@@ -1,0 +1,8 @@
+{
+  "project_name": "CUDA Kaggle Job",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "kaggle_username": "param_pal_singh",
+  "kernel_name": "gemm_kernel",
+  "local_compute_capability": "61",
+  "remote_compute_capability": "75"
+}
