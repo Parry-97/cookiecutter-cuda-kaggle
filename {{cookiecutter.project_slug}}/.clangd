@@ -1,0 +1,11 @@
+CompileFlags:
+  Add:
+    - "-xcuda"                           # Force clangd to parse using the CUDA C++ engine
+    - "-std=c++17"                       # Enforce the standard required by CUTLASS 3.x
+    - "--cuda-path=/opt/cuda"            # Target the base Arch Linux CUDA install directory
+    - "--cuda-gpu-arch=sm_{{cookiecutter.remote_compute_capability}}"  # Dynamic architecture alignment
+    - "--no-cuda-version-check"          # Prevent version mismatches between clang and nvcc
+    - "-Iextern/cutlass/include"         # Explicitly map your local header-only CUTLASS repo
+    - "-Isrc"                            # Include your local source folder context
+    - "-I/opt/cuda/include"              # Add baseline CUDA headers
+    - "-I/opt/cuda/targets/x86_64-linux/include" # CRITICAL: Map Arch's hidden nested target headers
