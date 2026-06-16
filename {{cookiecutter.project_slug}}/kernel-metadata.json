@@ -8,5 +8,6 @@
   "enable_gpu": true,
   "enable_tpu": false,
   "enable_internet": true,
-  "is_private": true
+  "is_private": true,
+  "machine_shape": "NvidiaTeslaT4"
 }
